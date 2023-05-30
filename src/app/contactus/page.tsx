@@ -15,13 +15,14 @@ export default function Page() {
 
         // @ts-ignore
         const res: AxiosResponse = await axios.post(process.env.ENDPOINT, {
-            message: `${firstName} ${lastName} - Email: (${email}) says: ${message}`},
-        {
-            headers: {
-                "x-api-key": process.env.API_KEY,
-                "Content-Type": "application/json"
-            }
-        })
+                message: `${firstName} ${lastName} - Email: (${email}) says: ${message}`
+            },
+            {
+                headers: {
+                    "x-api-key": process.env.API_KEY,
+                    "Content-Type": "application/json"
+                }
+            })
         const {status} = res;
         if (status === 200) {
             alert("Message sent.")
@@ -29,7 +30,7 @@ export default function Page() {
             setLastName("")
             setEmail("")
             setMessage("")
-            
+
         } else {
             alert("Message failed to send.")
         }
@@ -77,7 +78,7 @@ export default function Page() {
                                 </div>
                             </div>
 
-                            <div className="sm:col-span-4">
+                            <div className="col-span-full">
                                 <label htmlFor="email"
                                        className="block text-sm font-medium leading-6 text-black-500">
                                     Email address
@@ -108,8 +109,6 @@ export default function Page() {
                                     defaultValue={''}
                                 />
                                 </div>
-                                <p className="mt-3 text-sm leading-6 text-black-500">Any details about your needs for
-                                    your project</p>
                             </div>
 
                         </div>
