@@ -4,6 +4,7 @@ import Link from "next/link";
 import React, { Fragment, useState } from 'react'
 import { Dialog, Popover, Tab, Transition } from '@headlessui/react'
 import { Bars3Icon, MagnifyingGlassIcon, ShoppingBagIcon, XMarkIcon } from '@heroicons/react/24/outline'
+import Image from "next/image";
 
 function NavBar() {
   const [open, setOpen] = useState(false)
@@ -61,7 +62,7 @@ function NavBar() {
                 <div className="ml-4 flex lg:ml-0">
                   <a href="#">
                     <span className="sr-only">appFM</span>
-                    <img
+                    <Image
                         className="h-8 w-auto"
                         src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
                         alt=""
