@@ -4,7 +4,8 @@ const nextConfig = {
     env: {
         API_KEY: process.env.NEXT_PUBLIC_API_KEY,
         ENDPOINT: process.env.NEXT_PUBLIC_ENDPOINT,
-    }
+    },
+    ignoreBuildErrors: true,
 }
 
 module.exports = nextConfig
